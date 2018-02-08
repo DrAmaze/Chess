@@ -13,17 +13,15 @@ class Display
     puts "  #{(0..7).to_a.join(" ")}"
     @board.grid.each_with_index do |row, i|
       row.each_with_index do |col, j|
-        if j == 0
-          print "#{i}"
-        end
+        print "#{i}" if j == 0
+
         if @cursor.cursor_pos == [i, j]
           print " #{col}".colorize(background: :light_blue)
         else
           print " #{col}"
         end
-        if j == 7
-          puts ""
-        end
+        
+        puts "" if j == 7
       end
     end
   end
