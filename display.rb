@@ -58,3 +58,5 @@ class Display
       puts val
     end
   end
+
+end

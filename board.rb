@@ -1,4 +1,4 @@
-require_relative 'pieces'
+require_relative 'piece'
 
 class Board
   attr_reader :rows
